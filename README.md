@@ -1,6 +1,30 @@
 
 
 # NestjsMicroservices
+link tutorial:
+https://blog.logrocket.com/microservices-nestjs-kafka-typescript/
+
+# commands tutorial
+```
+npx create-nx-workspace@latest
+cd nestjs-microservices
+npm i @nestjs/microservices kafkajs class-validator class-transformer
+
+nx g @nrwl/node:lib shared
+nx g @nrwl/nest:app auth-microservice
+nx g @nrwl/nest:app payments-microservice
+
+
+nx build api-gateway
+nx build auth-microservice  
+nx build payments-microservice
+
+nx serve api-gateway
+nx serve auth-microservice
+nx serve payments-microservice
+
+```
+
 
 This project was generated using [Nx](https://nx.dev).
 
